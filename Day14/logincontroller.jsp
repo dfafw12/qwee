@@ -23,7 +23,7 @@
 			response.sendRedirect("main.jsp");
 			session.setAttribute("logid",mid);
 		}else{
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("login.jsp");
 		}
 	%>
 
