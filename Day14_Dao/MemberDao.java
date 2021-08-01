@@ -22,7 +22,7 @@ public class MemberDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/memberboard?serverTimezone=UTC", "root",
-					"1234");
+					"as0598");
 		} catch (Exception e) {
 
 		}
@@ -56,6 +56,7 @@ public class MemberDao {
 			PreparedStatement statement = conn.prepareStatement(SQL);
 			statement.setString(1, mid);
 			statement.setString(2, mpw);
+			
 			rs= statement.executeQuery();
 			if(rs.next()) {
 				return 1;
